@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'SONGER_Condensed';
+    src: url('../fonts/Songercondensed.ttf');
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+body {
+    background: url("../img/background.jpg") 50% 50% no-repeat;
+    background-color: #4b052f;
+    background-size: cover;
+    height: 100%;
+}
+
+#container {
+    position: relative;
+    height: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+#header {
+    height: 174px;
+}
+    #header .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transform: translate(0,-21px);
+    }
+        #header .content .logo img {
+            width: 100%;
+        }
+            .android__app img {
+                display: block;
+            }
+            .android__app {
+                position: relative;
+            }
+            .android__app a:before {
+                content: '';
+                transform-origin: center center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .android__app a:before {
+                box-shadow: 0 0 20px rgba(251, 211, 2, 0.5);
+                animation: move 2s linear infinite;
+            }
+
+@keyframes move {
+    0% {box-shadow: 0 0 30px rgba(251, 211, 2, 0.5);}
+    50% {box-shadow: 0 0 10px rgba(251, 211, 2, 0.5);}
+    100% {box-shadow: 0 0 40px rgba(251, 211, 2, 0.5);}
+}
+
+#main img {
+    width: 100%;
+    height: 387px;
+}
+
+p {
+    color: #fff;
+    font-family: 'SONGER_Condensed';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 15px;
+    height: 100%;
+}
+
+#description section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+    #description .phone_first,#description .phone_second {
+        display: flex;
+        width: 83%;
+    }
+        #description .phone_first .phone_first_img {
+            background: url("../img/phone_first.png") 50% 50% no-repeat;
+            width: 234px;
+            height: 494px;
+        }
+        #description .phone_first p {
+            margin-top: 40px;
+            width: 380px;
+            margin-left: 30px;
+            text-align: left;
+        }
+    #description .phone_second {
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-top: -33%;
+        width: 69%;
+    }
+        #description .phone_second .phone_second_img {
+            background: url("../img/phone_second.png") 50% 50% no-repeat;
+            width: 234px;
+            height: 494px;
+        }
+        #description .phone_second p {
+            width: 240px;
+            margin-right: 56px;
+            margin-bottom: 7px;
+            text-align: left;
+        }
+        #description .phone_second .phone_second-animate {
+            position: relative;
+            cursor: pointer;
+        }
+            #description .phone_second .girl_hover {
+                position: absolute;
+                left: 16px;
+                top: 55px;
+                z-index: 3;
+            }
+
+        #description .phone_second .active {
+            width: 201.3px;
+            position: absolute;
+            height: 398px;
+            left: 16px;
+            top: 55px;
+            z-index: 2;
+        }
+        #description .phone_second .phone_second-btn {
+            position: absolute;
+            left: 55px;
+            bottom: 60px;
+            z-index: 4;
+        }
+            #description .phone_second-animate:hover .girl_hover {
+                opacity: 0;
+            }
+
+    #description .android__app.mobile {
+        display: none;
+    }
+    #description .download__button {
+        height: 34px;
+        width: 188px;
+        text-transform: uppercase;
+        border-radius: 20px;
+        line-height: 40px;
+        text-align: center;
+        background: #FBD302;
+        cursor: pointer;
+    }
+        #description .download__button:hover {
+            background: #FBA602;
+        }
+        #description .download__button span {
+            font-family: 'SONGER_Condensed';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 28px;
+            color: #000;
+        }
+
+#footer {
+    margin-top: 103px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+    #footer span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        opacity: 0.5;
+    }
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+    body {
+        height: 100%;
+    }
+}
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 768px)
+and (orientation : landscape) {
+    #main{
+        display: flex;
+        justify-content: center;
+    }
+        #main iframe {
+            width: 90%!important;
+            height: 330px;
+        }
+}
+
+@media (max-width: 900px) {
+    #header .content {
+        justify-content: center;
+    }
+        #header .content .android__app.desktop {
+            display: none;
+        }
+        #description .android__app.mobile {
+            display: block;
+            margin-right: 20px;
+        }
+        #description p {
+            padding: 0 10px;
+        }
+        .buttons {
+            display: flex;
+            align-items: center;
+        }
+    #main img {
+        height: unset;
+    }
+}
+@media (max-width: 860px) {
+    #main iframe {
+        width: 100%;
+    }
+}
+@media (max-width: 670px) {
+    #description .second .phone_first{
+        display: block;
+        text-align: center;
+        width: unset
+    }
+        #description .second .phone_first p {
+            width: unset;
+            margin: 0;
+            text-align: center;
+        }
+    #description .second .phone_second {
+        flex-direction: column-reverse;
+        align-items: center;
+        margin-top: 50px;
+    }
+        #description .second .phone_second p {
+            width: unset;
+            text-align: center;
+            margin: 45px 0 0;
+        }
+    #description .second .phone_first .phone_first_img {
+        background: url("../img/phone_first_mobile.png") 50% 50% no-repeat;
+        width: unset;
+    }
+    #description .second .phone_second .active {
+        width: 202px;
+    }
+    #description .second .phone_second .phone_second-animate {
+        overflow: hidden;
+    }
+    #description .second .phone_second .phone_second_img {
+        background: url("../img/phone_second_mobile.png") 50% 50% no-repeat;
+        height: 389px;
+    }
+    #description .second .phone_second .phone_second-btn {
+        bottom: -30px;
+    }
+}
+@media (max-width: 590px) {
+    #main iframe {
+        height: 280px;
+    }
+}
+@media (max-width: 500px) {
+    #header {
+        height: unset;
+    }
+        #header .content {
+            transform: unset;
+        }
+            #header .content .logo img {
+                width: 97%;
+        }
+    #main{
+        display: flex;
+        justify-content: center;
+    }
+        #main iframe {
+            width: 90%;
+            height: 210px;
+        }
+    #description {
+        margin-top: 25px;
+    }
+        #description p {
+            margin-bottom: 15px;
+        }
+    #footer {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 375px) {
+    #main iframe {
+        height: 190px;
+    }
+}
+@media (max-width: 350px) {
+    #main iframe {
+        height: 160px;
+    }
+    #description p {
+       font-size: 16px;
+    }
+    #description .phone_first .phone_first_img {
+        height: 435px;
+    }
+    #description .second .phone_second p {
+        margin: 15px 0 0;
+    }
+    #description .download__button {
+        width: 138px;
+    }
+    #description .download__button span {
+        font-size: 16px;
+    }
+    #footer {
+        bottom: 10px;
+    }
+        #footer span {
+            font-size: 14px;
+        }
+}
